@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Unit.h"
+@interface Peasant : Unit
 
-@interface Peasant : NSObject
+
 
 @end

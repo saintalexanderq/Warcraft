@@ -16,6 +16,17 @@
     return self;
 }
 
+-(Peasant *)trainPeasant {
+    if([self canTrainPeasant]) {
+        Peasant *peasant = [[Peasant alloc] init];
+        _gold -= 90;
+        _food -= 5;
+        return peasant;
+    } else {
+        return nil;
+    }
+}
+
 -(Footman *)trainFootman {
     if([self canTrainFootman]){
     Footman *footman = [[Footman alloc]init];
@@ -26,6 +37,14 @@
         return nil;
     }
 
+}
+
+-(BOOL)canTrainPeasant {
+    if(_gold >=90 && _food>= 5) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 -(BOOL)canTrainFootman {

@@ -12,6 +12,10 @@
 @interface Footman : Unit
 //@property (assign) int healthPoints;
 //@property (assign) int attackPower;
+@property(assign) int damage;
+
+- (void)damage:(int)damage; // take dmg
+- (void)attack:(Unit *)enemy withDamage:(int)damage; // do dmg
 
 
 
